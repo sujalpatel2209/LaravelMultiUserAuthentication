@@ -15,8 +15,14 @@
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('masterLogin');
+// Master Login Routes
+
+Route::get('/', 'MasterController@showLoginForm');
+Route::get('/masterLogin', 'MasterController@showLoginForm');
+Route::post('/login', 'MasterController@login');
+Route::get('/masterDashboard', function(){
+    return view('masterDashboard');
 });
+Route::post('/logout', 'MasterController@logout');
 
 Route::get('/showpass','Test@index');

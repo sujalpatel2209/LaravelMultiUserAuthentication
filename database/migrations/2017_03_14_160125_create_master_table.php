@@ -18,6 +18,7 @@ class CreateMasterTable extends Migration
             $table->string('name');
             $table->string('emailId');
             $table->string('password');
+            $table->string('remember_token');
             $table->timestamps();
         });
     }

@@ -47,7 +47,7 @@ return [
         ],
 
         'master' => [
-            'driver' => 'token',
+            'driver' => 'session',
             'provider' => 'master'
         ],
     ],
@@ -77,7 +77,7 @@ return [
 
         'master' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Master::class,
         ],
 
         // 'users' => [
