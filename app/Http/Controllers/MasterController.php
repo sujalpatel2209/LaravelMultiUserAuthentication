@@ -30,7 +30,7 @@ class MasterController extends Controller
         $this->guard()->logout();
         $request->session()->flush('master');
         $request->session()->regenerate();
-        return redirect('/masterLogin');
+        return redirect('/');
     }
 
     protected function guard(){

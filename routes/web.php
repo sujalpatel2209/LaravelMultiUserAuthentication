@@ -22,7 +22,7 @@ Route::get('/masterLogin', 'MasterController@showLoginForm');
 Route::post('/login', 'MasterController@login');
 Route::get('/masterDashboard', function(){
     return view('masterDashboard');
-});
+})->middleware('checkMasterLogin');
 Route::post('/logout', 'MasterController@logout');
 
 Route::get('/showpass','Test@index');
