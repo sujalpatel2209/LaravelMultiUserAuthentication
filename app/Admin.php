@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class Admin extends Authenticatable
 {
     use Notifiable;
 
@@ -28,6 +28,6 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    protected $table = "user";
+    protected $table = "admin";
     protected $primaryKey = "id";
 }

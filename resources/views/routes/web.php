@@ -37,7 +37,7 @@ Route::post('/admin/logout', 'AdminController@logout');
 Route::get('/user', 'UserController@showLoginForm');
 Route::get('/user/login', 'UserController@showLoginForm');
 Route::post('/user/login', 'UserController@login');
-Route::get('/user/userDashboard', function(){
+Route::get('/user/adminDashboard', function(){
     return view('userDashboard');
 })->middleware('checkUserLogin');
 Route::post('/user/logout', 'UserController@logout');
