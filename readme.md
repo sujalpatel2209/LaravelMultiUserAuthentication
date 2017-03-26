@@ -16,8 +16,8 @@ Follow Below Step for use this repository.
 ## How to use
 
 1. Download zip or clone the repository
-2. Execute Following Command : composer install (Required the composer intall in your PC)
-3. Import .sql file in your database (Sql File Available in downloaded repository)
+2. Execute Following Command for install dependency : composer install (Required the composer install in your PC)
+3. Execute Following Command for migrate database : php artisan migrate (All Migration files are available in this repository)
 
 In this example, there are three different user role login. list out in below.
 
