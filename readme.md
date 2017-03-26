@@ -9,17 +9,21 @@
 
 <h1>Laravel Multiple Authentication Login</h1>
 
-This is Multiple user authentication example in Laravel 5.4. In this example there are three different user role login. listout in below.
+This is Multiple user authentication examples in Laravel 5.4. Using this repository easily manage multiple user login projects.
 
-1. Master Login
-2. Admin Login
-3. User Login
+Follow Below Step for use this repository.
 
 ## How to use
 
 1. Download zip or clone the repository
 2. Execute Following Command : composer install (Required the composer intall in your PC)
 3. Import .sql file in your database (Sql File Available in downloaded repository)
+
+In this example, there are three different user role login. list out in below.
+
+1. Master Login
+2. Admin Login
+3. User Login
 
 ## Master Login
     
