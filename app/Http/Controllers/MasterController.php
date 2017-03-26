@@ -28,7 +28,8 @@ class MasterController extends Controller
     public function logout(Request $request){
 
         $this->guard()->logout();
-        $request->session()->flush('master');
+        //$request->session()->flush('master');
+        $request->session()->forget('master');
         $request->session()->regenerate();
         return redirect('/');
     }

@@ -17,7 +17,7 @@
 
 // Master Login Routes 15-03-2017
 Route::get('/', 'MasterController@showLoginForm');
-Route::get('/masterLogin', 'MasterController@showLoginForm');
+Route::get('/master', 'MasterController@showLoginForm');
 Route::post('/login', 'MasterController@login');
 Route::get('/masterDashboard', function(){
     return view('masterDashboard');

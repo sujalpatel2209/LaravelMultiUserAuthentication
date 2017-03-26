@@ -28,7 +28,8 @@ class AdminController extends Controller
     public function logout(Request $request){
 
         $this->guard()->logout();
-        $request->session()->flush('admin');
+        //$request->session()->flush('admin');
+        $request->session()->forget('admin');
         $request->session()->regenerate();
         return redirect('/admin');
     }
