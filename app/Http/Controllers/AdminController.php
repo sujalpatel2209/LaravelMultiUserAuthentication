@@ -10,7 +10,7 @@ use App\Http\Middleware;
 class AdminController extends Controller
 {
     use AuthenticatesUsers;
-
+    
     protected $redirectTo = "/admin/adminDashboard";
 
     public function __construct(){
