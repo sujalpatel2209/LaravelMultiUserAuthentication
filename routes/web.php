@@ -15,31 +15,37 @@
 //     return view('welcome');
 // });
 
-// Master Login Routes 15-03-2017
+// Master Login Routes 21-08-2017
 Route::get('/', 'MasterController@showLoginForm');
 Route::get('/master', 'MasterController@showLoginForm');
 Route::post('/login', 'MasterController@login');
-Route::get('/masterDashboard', function(){
-    return view('masterDashboard');
-})->middleware('checkMasterLogin');
-Route::post('/logout', 'MasterController@logout');
+Route::group(['middleware' => 'checkMasterLogin'], function() {
+    Route::get('/masterDashboard', function(){
+        return view('dashboard.masterDashboard');
+    });
+    Route::post('/logout', 'MasterController@logout');
+});
 
-// Admin Login Route 18-03-2017
+// Admin Login Route 21-08-2017
 Route::get('/admin', 'AdminController@showLoginForm');
 Route::get('/admin/login', 'AdminController@showLoginForm');
 Route::post('/admin/login', 'AdminController@login');
-Route::get('/admin/adminDashboard', function(){
-    return view('adminDashboard');
-})->middleware('checkAdminLogin');
-Route::post('/admin/logout', 'AdminController@logout');
+Route::group(['middleware' => 'checkAdminLogin'], function() {
+    Route::get('/admin/adminDashboard', function(){
+        return view('dashboard.adminDashboard');
+    });
+    Route::post('/admin/logout', 'AdminController@logout');
+});
 
-// User Login Route 18-03-2017
+// User Login Route 21-08-2017
 Route::get('/user', 'UserController@showLoginForm');
 Route::get('/user/login', 'UserController@showLoginForm');
 Route::post('/user/login', 'UserController@login');
-Route::get('/user/userDashboard', function(){
-    return view('userDashboard');
-})->middleware('checkUserLogin');
-Route::post('/user/logout', 'UserController@logout');
+Route::group(['middleware' => 'checkAdminLogin'], function() {
+    Route::get('/user/userDashboard', function(){
+        return view('dashboard.userDashboard');
+    });
+    Route::post('/user/logout', 'UserController@logout');
+});
 
 Route::get('/showpass','Test@index');

@@ -22,7 +22,9 @@
     {{ csrf_field() }}
       <h2 class="form-signin-heading text-center">User Login</h2><br>
       <input type="text" class="form-control" name="emailId" placeholder="Email Address" required="" autofocus="" /><br>
+      <label style="color:red">{{ $errors->first('emailId') }}</label>
       <input type="password" class="form-control" name="password" placeholder="Password" required=""/><br>
+      <label>{{ $errors->first('password') }}</label>
       <label class="checkbox">
         <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
       </label><br>
