@@ -7,7 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-<h1>Laravel Multiple Authentication Login</h1>
+<h1>User Authentication with Laravel using custom guard</h1>
+
+Almost every web application has some need for authentication. Users of our app need the ability to login and logout. Fortunately, Laravel provides a clean, simple and unobtrusive password-based authentication class to help you validate user credentials and retrieve information about the current user of your application.
 
 This is Multiple user authentication examples in Laravel 5.4. Using this repository easily manage multiple user login projects.
 
