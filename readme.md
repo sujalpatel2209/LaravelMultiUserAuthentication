@@ -18,6 +18,7 @@ Follow Below Step for use this repository.
 1. Download zip or clone the repository
 2. Execute Following Command for install dependency : composer install (Required the composer install in your PC)
 3. Execute Following Command for migrate database : php artisan migrate (All Migration files are available in this repository)
+4. Run Seeder Files : php artisan db:seed
 
 In this example, there are three different user role login. list out in below.
 
@@ -30,7 +31,10 @@ In this example, there are three different user role login. list out in below.
     http://localhost/laravelMultiAuth/public/
     OR
     http://localhost/laravelMultiAuth/public/master
+    OR
+    http://localhost:8000/master
     
+
     Username : master@gmail.com
     Password : 2209
 
@@ -39,6 +43,8 @@ In this example, there are three different user role login. list out in below.
     http://localhost/laravelMultiAuth/public/admin
     OR
     http://localhost/laravelMultiAuth/public/admin/login
+    OR
+    http://localhost:8000/admin
     
     Username : admin@gmail.com
     Password : 2209
@@ -48,6 +54,8 @@ In this example, there are three different user role login. list out in below.
     http://localhost/laravelMultiAuth/public/user
     OR
     http://localhost/laravelMultiAuth/public/user/login
+    OR
+    http://localhost:8000/user
 
     Username : user@gmail.com
     Password : 2209
