@@ -47,5 +47,3 @@ Route::group(['middleware' => 'checkAdminLogin'], function() {
     });
     Route::post('/user/logout', 'UserController@logout');
 });
-
-Route::get('/showpass','Test@index');
