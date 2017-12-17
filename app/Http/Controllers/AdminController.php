@@ -18,12 +18,13 @@ class AdminController extends Controller
     }
 
     public function showLoginForm(){
+
         return view('adminLogin');
     }
 
     public function username(){
         return "emailId";
-    }
+    }   
 
     public function logout(Request $request){
 
